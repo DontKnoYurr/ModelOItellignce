@@ -1,0 +1,14 @@
+# Import necessary libraries
+import numpy as np
+
+# Load test data from file
+test_data = np.load('data/test_data.npy')
+
+# Normalize the data
+test_data = test_data.astype('float32') / 255
+
+# Reshape the data to match the model input shape
+test_data = test_data.reshape((-1, 28, 28, 1))
+
+# Save the preprocessed test data for later use
+np.save('data/test_data_preprocessed.npy', test_data)

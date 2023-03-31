@@ -1,0 +1,6 @@
+# Save the trained model
+model.save('model/MoI_model.h5')
+
+# Load the saved model
+from tensorflow.keras.models import load_model
+model = load_model('model/MoI_model.h5')

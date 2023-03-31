@@ -1,0 +1,12 @@
+import numpy as np
+from data_utils import load_dataset
+
+# Load the dataset
+train_set_x_orig, _, _ = load_dataset()
+
+# Flatten and normalize the training images
+train_set_x_flatten = train_set_x_orig.reshape(train_set_x_orig.shape[0], -1).T
+train_set_x = train_set_x_flatten / 255.
+
+# Save the training data as a numpy array
+np.save('train_data.npy', train_set_x)

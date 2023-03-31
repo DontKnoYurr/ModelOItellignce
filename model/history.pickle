@@ -1,0 +1,9 @@
+import pickle
+
+with open('model/history.pickle', 'wb') as f:
+    pickle.dump(history.history, f)
+
+import pickle
+
+with open('model/history.pickle', 'rb') as f:
+    history = pickle.load(f)

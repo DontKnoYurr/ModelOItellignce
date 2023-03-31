@@ -1,0 +1,4 @@
+import numpy as np
+
+test_labels = np.array([0, 0, 0, ..., 9, 9, 9])
+np.save('test_labels.npy', test_labels)
